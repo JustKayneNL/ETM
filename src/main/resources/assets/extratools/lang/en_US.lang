@@ -1,0 +1,13 @@
+##Tab
+itemGroup.ExtraTools=Extra Tools
+##Tools
+item.ExtraTools.florianPickaxe.name=Florian Pickaxe
+item.ExtraTools.florianSword.name=Florian Sword
+item.ExtraTools.florianAxe.name=Florian Axe
+item.ExtraTools.florianShovel.name=Florian Shovel
+
+##Blocks
+tile.oreFlorian.name=Florian Ore
+
+##Items
+item.ExtraTools.ingotFlorian.name=Florian Ingot
