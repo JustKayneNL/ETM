@@ -8,6 +8,6 @@ public class ToolFlorianHoe extends ItemHoe {
 	super(ExtraToolsMaterials.florianShovel);
 	setCreativeTab(ExtraTools.ExtraToolsTab);
 	setTextureName(ExtraTools.MODID + ":toolFlorianHoe" );
-	setUnlocalizedName(ExtraTools.MODID + ".FlorianHoe");
+	setUnlocalizedName(ExtraTools.MODID + ".florianHoe");
 	}
 }

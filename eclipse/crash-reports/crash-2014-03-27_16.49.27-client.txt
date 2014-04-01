@@ -1,0 +1,112 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 27-3-14 16:49
+Description: Rendering screen
+
+java.lang.ExceptionInInitializerError
+	at net.minecraft.client.Minecraft.launchIntegratedServer(Minecraft.java:2235)
+	at cpw.mods.fml.client.FMLClientHandler.launchIntegratedServerCallback(FMLClientHandler.java:617)
+	at cpw.mods.fml.client.FMLClientHandler.tryLoadExistingWorld(FMLClientHandler.java:600)
+	at net.minecraft.client.gui.GuiSelectWorld.func_146615_e(GuiSelectWorld.java:186)
+	at net.minecraft.client.gui.GuiSelectWorld$List.elementClicked(GuiSelectWorld.java:266)
+	at net.minecraft.client.gui.GuiSlot.drawScreen(GuiSlot.java:271)
+	at net.minecraft.client.gui.GuiSelectWorld.drawScreen(GuiSelectWorld.java:222)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1209)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:954)
+	at net.minecraft.client.main.Main.main(Main.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.lang.IllegalStateException: failed to create a child event loop
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:61)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:49)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:61)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at net.minecraft.network.NetworkManager.<clinit>(NetworkManager.java:49)
+	... 17 more
+Caused by: io.netty.channel.ChannelException: failed to open a new selector
+	at io.netty.channel.nio.NioEventLoop.openSelector(NioEventLoop.java:128)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:120)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:87)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:57)
+	... 21 more
+Caused by: java.io.IOException: Unable to establish loopback connection
+	at sun.nio.ch.PipeImpl$Initializer.run(Unknown Source)
+	at sun.nio.ch.PipeImpl$Initializer.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.nio.ch.PipeImpl.<init>(Unknown Source)
+	at sun.nio.ch.SelectorProviderImpl.openPipe(Unknown Source)
+	at java.nio.channels.Pipe.open(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.<init>(Unknown Source)
+	at sun.nio.ch.WindowsSelectorProvider.openSelector(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.openSelector(NioEventLoop.java:126)
+	... 24 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.connect(Unknown Source)
+	at java.nio.channels.SocketChannel.open(Unknown Source)
+	... 33 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.Minecraft.launchIntegratedServer(Minecraft.java:2235)
+	at cpw.mods.fml.client.FMLClientHandler.launchIntegratedServerCallback(FMLClientHandler.java:617)
+	at cpw.mods.fml.client.FMLClientHandler.tryLoadExistingWorld(FMLClientHandler.java:600)
+	at net.minecraft.client.gui.GuiSelectWorld.func_146615_e(GuiSelectWorld.java:186)
+	at net.minecraft.client.gui.GuiSelectWorld$List.elementClicked(GuiSelectWorld.java:266)
+	at net.minecraft.client.gui.GuiSlot.drawScreen(GuiSlot.java:271)
+	at net.minecraft.client.gui.GuiSelectWorld.drawScreen(GuiSelectWorld.java:222)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.GuiMainMenu
+	Mouse location: Scaled: (186, 51). Absolute: (373, 376)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+Stacktrace:
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1209)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:954)
+	at net.minecraft.client.main.Main.main(Main.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.2
+	Operating System: Windows 8 (amd64) version 6.2
+	Java Version: 1.7.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 912808960 bytes (870 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.01-pre FML v7.2.129.1047 Minecraft Forge 10.12.0.1047 6 mods loaded, 6 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available
+	FML{7.2.129.1047} [Forge Mod Loader] (forgeSrc-1.7.2-10.12.0.1047.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available
+	Forge{10.12.0.1047} [Minecraft Forge] (forgeSrc-1.7.2-10.12.0.1047.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available
+	Aroma1997Core{1.0.1.5.b33} [Aroma1997Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available
+	ExtraTools{-1} [Extra Tools] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available
+	Aroma1997CoreHelper{1.0.1.5.b33} [Aroma1997Core|Helper] (Aroma1997Core-1.7.2-1.0.2.0.b36-deobf.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available
+	Launched Version: 1.6
+	LWJGL: 2.9.0
+	OpenGL: GeForce GT 740M/PCIe/SSE2 GL version 4.3.0, NVIDIA Corporation
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: ~~ERROR~~ NullPointerException: null
+	Anisotropic Filtering: Off (1)

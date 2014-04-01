@@ -1,0 +1,81 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 21-3-14 17:03
+Description: Initializing game
+
+java.lang.IllegalArgumentException: Multiple entries with same key: ExtraTorches=FMLMod:ExtraTorches{0.1} and ExtraTorches=FMLMod:ExtraTorches{0.1}
+	at com.google.common.collect.ImmutableMap.checkNoConflict(ImmutableMap.java:150)
+	at com.google.common.collect.RegularImmutableMap.checkNoConflictInBucket(RegularImmutableMap.java:104)
+	at com.google.common.collect.RegularImmutableMap.<init>(RegularImmutableMap.java:70)
+	at com.google.common.collect.ImmutableMap$Builder.build(ImmutableMap.java:254)
+	at com.google.common.collect.Maps.uniqueIndex(Maps.java:1164)
+	at com.google.common.collect.Maps.uniqueIndex(Maps.java:1138)
+	at cpw.mods.fml.common.Loader.identifyMods(Loader.java:340)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:460)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:201)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:564)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:934)
+	at net.minecraft.client.main.Main.main(Main.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.ImmutableMap.checkNoConflict(ImmutableMap.java:150)
+	at com.google.common.collect.RegularImmutableMap.checkNoConflictInBucket(RegularImmutableMap.java:104)
+	at com.google.common.collect.RegularImmutableMap.<init>(RegularImmutableMap.java:70)
+	at com.google.common.collect.ImmutableMap$Builder.build(ImmutableMap.java:254)
+	at com.google.common.collect.Maps.uniqueIndex(Maps.java:1164)
+	at com.google.common.collect.Maps.uniqueIndex(Maps.java:1138)
+	at cpw.mods.fml.common.Loader.identifyMods(Loader.java:340)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:460)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:201)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:564)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:934)
+	at net.minecraft.client.main.Main.main(Main.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.2
+	Operating System: Windows 8 (amd64) version 6.2
+	Java Version: 1.7.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 932287960 bytes (889 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.01-pre FML v7.2.129.1047 Minecraft Forge 10.12.0.1047 5 mods loaded, 0 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) 
+	FML{7.2.129.1047} [Forge Mod Loader] (forgeSrc-1.7.2-10.12.0.1047.jar) 
+	Forge{10.12.0.1047} [Minecraft Forge] (forgeSrc-1.7.2-10.12.0.1047.jar) 
+	ExtraTorches{0.1} [ExtraTorches] (bin) 
+	ExtraTorches{0.1} [ExtraTorches] (bin) 
+	Launched Version: 1.6
+	LWJGL: 2.9.0
+	OpenGL: GeForce GT 740M/PCIe/SSE2 GL version 4.3.0, NVIDIA Corporation
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: ~~ERROR~~ NullPointerException: null
+	Anisotropic Filtering: Off (1)

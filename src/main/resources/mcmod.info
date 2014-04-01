@@ -1,0 +1,15 @@
+[
+{
+  "modid": "ExtraTools",
+  "name": "Extra Tools",
+  "description": "A Extra Tools Mod",
+  "mcversion": "${mcversion}",
+  "version": "${version}",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["JustKayneNL"],
+  "credits": "Code By: JustKayneNL, Support By: MattsMc",
+  "dependencies": ["mod_MinecraftForge"]
+}
+]

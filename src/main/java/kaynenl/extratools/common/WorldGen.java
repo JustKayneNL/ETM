@@ -19,8 +19,9 @@ public class WorldGen implements IWorldGenerator {
 	}
 
 	public void generateSurface(World world, Random random, int x, int z) {
-		//this.generateOre(world, Ore, Cluster, Cluster Size, random, x, z, Level);
+		
 		this.generateOre(world, Registry.oreFlorian, 4, 4, random, x, z, 20);
+		this.generateOre(world, Registry.oreBorium, 3, 2, random, x, z, 10);
 	}
 
 	public void generateNether(World world, Random random, int i, int j) {

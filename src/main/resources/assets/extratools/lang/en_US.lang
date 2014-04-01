@@ -1,13 +1,23 @@
 ##Tab
 itemGroup.ExtraTools=Extra Tools
 ##Tools
+    ##Florian
 item.ExtraTools.florianPickaxe.name=Florian Pickaxe
 item.ExtraTools.florianSword.name=Florian Sword
 item.ExtraTools.florianAxe.name=Florian Axe
 item.ExtraTools.florianShovel.name=Florian Shovel
+item.ExtraTools.florianHoe.name=Florian Hoe
+    ##Borium
+item.ExtraTools.boriumPickaxe.name=Borium Pickaxe
+item.ExtraTools.boriumSword.name=Borium Sword
+item.ExtraTools.boriumAxe.name=Borium Axe
+item.ExtraTools.boriumShovel.name=Borium Shovel
+item.ExtraTools.boriumHoe.name=Borium Hoe
 
 ##Blocks
 tile.oreFlorian.name=Florian Ore
+tile.oreBorium.name=Borium Ore
 
 ##Items
 item.ExtraTools.ingotFlorian.name=Florian Ingot
+item.ExtraTools.ingotBorium.name=Borium Ingot
