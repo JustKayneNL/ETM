@@ -1,5 +1,5 @@
-package kaynenl.extratools.tools;
-import kaynenl.extratools.common.ExtraTools;
+package kaynenl.extratools.items.pickaxe;
+import kaynenl.extratools.ExtraTools;
 import kaynenl.extratools.materials.ExtraToolsMaterials;
 import net.minecraft.item.ItemPickaxe;
 

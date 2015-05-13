@@ -1,6 +1,6 @@
-package kaynenl.extratools.tools;
+package kaynenl.extratools.items.hoe;
 
-import kaynenl.extratools.common.ExtraTools;
+import kaynenl.extratools.ExtraTools;
 import kaynenl.extratools.materials.ExtraToolsMaterials;
 import net.minecraft.item.ItemHoe;
 

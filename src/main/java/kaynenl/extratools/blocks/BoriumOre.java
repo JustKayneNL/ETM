@@ -1,7 +1,6 @@
 package kaynenl.extratools.blocks;
-import kaynenl.extratools.common.ExtraTools;
+import kaynenl.extratools.ExtraTools;
 import net.minecraft.block.BlockOre;
-import net.minecraft.block.material.Material;
 
 public class BoriumOre extends BlockOre {
 	public BoriumOre() {

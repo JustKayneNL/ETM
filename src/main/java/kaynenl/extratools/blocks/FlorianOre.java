@@ -1,11 +1,7 @@
 package kaynenl.extratools.blocks;
-import cpw.mods.fml.common.Mod;
 import net.minecraft.block.BlockOre;
-import net.minecraft.item.Item;
-import kaynenl.extratools.common.WorldGen;
-import java.util.Random;
 
-import kaynenl.extratools.common.ExtraTools;
+import kaynenl.extratools.ExtraTools;
 
 public class FlorianOre extends BlockOre {
 
