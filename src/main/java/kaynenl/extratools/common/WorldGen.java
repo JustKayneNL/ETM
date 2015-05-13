@@ -1,9 +1,11 @@
 package kaynenl.extratools.common;
+
+import cpw.mods.fml.common.IWorldGenerator;
+import kaynenl.extratools.blocks.ETMBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import cpw.mods.fml.common.IWorldGenerator;
 
 import java.util.Random;
 
@@ -20,8 +22,8 @@ public class WorldGen implements IWorldGenerator {
 
 	public void generateSurface(World world, Random random, int x, int z) {
 		
-		this.generateOre(world, Registry.oreFlorian, 4, 4, random, x, z, 20);
-		this.generateOre(world, Registry.oreBorium, 3, 2, random, x, z, 10);
+		this.generateOre(world, ETMBlocks.oreFlorian, 4, 4, random, x, z, 20);
+		this.generateOre(world, ETMBlocks.oreBorium, 3, 2, random, x, z, 10);
 	}
 
 	public void generateNether(World world, Random random, int i, int j) {
