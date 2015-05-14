@@ -1,18 +1,18 @@
 package kaynenl.extratools.libs.util;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import manmaed.cutepuppymod.libs.Reference;
+import kaynenl.extratools.libs.EToolMReference;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class RegistryHelper {
 	public static void registerItem(Item item) {
-		GameRegistry.registerItem(item, Reference.MOD_ID + "_"
+		GameRegistry.registerItem(item, EToolMReference.MODID + "_"
 				+ item.getUnlocalizedName().substring(5));
 	}
 
 	public static void registerBlock(Block block) {
-		GameRegistry.registerBlock(block, Reference.MOD_ID + "_"
+		GameRegistry.registerBlock(block, EToolMReference.MODID + "_"
 				+ block.getUnlocalizedName().substring(5));
 	}
 }
