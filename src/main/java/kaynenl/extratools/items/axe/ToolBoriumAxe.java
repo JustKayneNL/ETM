@@ -8,6 +8,7 @@ import kaynenl.extratools.materials.ExtraToolsMaterials;
 public class ToolBoriumAxe extends ItemAxe {
 	public ToolBoriumAxe() {
 		super(ExtraToolsMaterials.boriumAxe);
+        setUnlocalizedName("toolboriumaxe");
         setTextureName(EToolMReference.MODID + ":"
                 + getUnlocalizedName().substring(5));
         setCreativeTab(ExtraTools.ExtraToolsTab);
